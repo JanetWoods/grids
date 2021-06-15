@@ -1,1 +1,20 @@
-.purple{color: purple;}
+/*----------Header Social Icons------------*/
+header{
+    position: relative;
+    ul.social  {
+        position: absolute;
+        bottom: .5rem;
+        right: $gutter;
+    }
+    ul.social li{width: auto;}
+}
+
+/* -----------COLUMN LAYOUT-----------------*/
+.row {clear:both;} //clear anything above rows
+.column{padding: 0 $gutter;}
+
+//Allows you to assign a class name that will automatically determine the appropriate width based on how many columns you want divided across the entire width of container
+@for $i from 1 through 12{
+    $w:($i / 12) * 100%;
+    .medium-#{$i}  {width: $w; float: left}
+}

@@ -1,1 +1,38 @@
-.orange{color:orange;}
+/*  ------------- NAV -------------  */
+nav {
+	ul {
+		margin-left: 2%;
+		border-left: 1px solid rgba(0,0,0,0.3);
+	}
+	ul li {
+		width: auto;
+	}// end li
+	ul li:last-child {border-right: 1px solid rgba(0,0,0,0.3);}
+	ul li a {
+		padding: .5rem 1rem;
+	} // and a
+} // end nav
+
+
+/*  ------------- MAIN -------------  */
+main {
+	margin: auto;
+
+
+
+
+
+
+
+
+} // end main
+
+/* -----------COLUMN LAYOUT-----------------*/
+.row {clear:both;} //clear anything above rows
+.column{padding: 0 $gutter;}
+
+//Allows you to assign a class name that will automatically determine the appropriate width based on how many columns you want divided across the entire width of container
+@for $i from 1 through 12{
+    $w:($i / 12) * 100%;
+    .large-#{$i}  {width: $w; float: left}
+}
